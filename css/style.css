@@ -1,45 +1,59 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container{
-    width: 990px;
-    display: flex;
-    justify-content: space-between;
-}
-header{
+
+header {
     display: flex;
     justify-content: center;
     height: 120px;
+
 }
-.logo{
-    
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+
+}
+
+.logo {
+
     display: flex;
     align-items: center;
 }
-.menu{
+
+.menu {
     display: flex;
     align-items: center;
 }
-nav ul, nav li{
-    list-style: none; /*remove os pontos da frente*/
+
+nav ul,
+nav li {
+    list-style: none;
     margin: 0;
     padding: 0;
+
 }
-nav ul{
+
+nav ul {
     display: flex;
 }
-nav a{
-    text-decoration: none; /*remove o sublinhado*/
+
+nav a {
+    text-decoration: none;
     padding: 15px;
     color: #727272;
 }
-nav .active a, nav a:hover{
-background-color: #39aee1;
-color: white;
+
+nav .active a,
+nav a:hover {
+    background-color: rgb(96, 96, 245);
+    color: white;
 }
-#banner{
+
+#banner {
     background-image: url('../img/img1.jpeg');
     background-position: center;
     background-size: cover;
@@ -47,67 +61,211 @@ color: white;
     display: flex;
     justify-content: center;
 }
-.column{
-    flex-direction: column ;
+
+.column {
+    flex-direction: column;
+
 }
-.banner_headline{
+
+.banner_headline {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1; /*terá tamanho variável*/
 
 }
-.banner_headline h1{
-    color: #fff;
+
+.banner_headline h1 {
+    color: white;
     font-size: 70px;
     text-shadow: 0px 1px 0px #5555;
     margin: 0;
     padding: 0;
     max-width: 350px;
 }
-.banner_headline h2{
-    margin-top: 50px;
-    color: #fff;
+
+.banner_headline h2 {
+    color: white;
     font-size: 21px;
     text-shadow: 0px 1px 0px #5555;
     margin: 0;
     padding: 0;
     max-width: 350px;
+    margin-top: 30px;
+
 
 }
 
-.banner_options{
+.banner_options {
     height: 210px;
     display: flex;
-    
 }
-.banner1, .banner2, .banner3 {
+
+.banner1,
+.banner2,
+.banner3 {
     flex: 1;
-    color: #fff;
+    color: white;
     padding: 20px;
+}
 
+.banner1 {
+    background-color: rgb(82, 82, 233);
 }
-.banner1{
-background-color: #39aee1;
+
+.banner2 {
+    background-color: rgb(47, 47, 192);
 }
-.banner2{
-background-color: #0079c7;
+
+.banner3 {
+    background-color: rgb(24, 24, 133);
 }
-.banner3{
-background-color: #2b4c99;
-}
-.banner_title{
+
+.banner_tittle {
     font-size: 21px;
-
 }
-.banner_desc{
+
+.banner_desc {
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.banner1_options a{
-    border: 1px solid #fff;
+
+.banner_options a {
+    border: 1px solid white;
     padding: 5px;
-    color: #fff;
+    color: white;
     text-decoration: none;
+}
+
+#geral {
+    display: flex;
+    justify-content: center;
+}
+
+.widget_title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.widget_title_text {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.widget_title_bar {
+    width: 50px;
+    height: 5px;
+    background-color: #36a9e1;
+    margin-top: 10px;
+}
+
+#rodape {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    line-height: 40px;
+    color: #5c5c5c;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+@media (max-width: 880px) {
+
+    /* Ajusta o container para se comportar em coluna */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Header com altura automática e melhor espaçamento */
+    header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    /* Logo centralizada */
+    .logo {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    /* Menu em coluna */
+    .menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 12px;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #ccc;
+    }
+
+    /* Banner mais flexível */
+    #banner {
+        height: auto;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .banner_headline {
+        align-items: center;
+    }
+
+    .banner_headline h1 {
+        font-size: 40px;
+        max-width: 100%;
+    }
+
+    .banner_headline h2 {
+        font-size: 18px;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Opções do banner em coluna */
+    .banner_options {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        margin-top: 30px;
+        align-items: stretch;
+    }
+
+    .banner1,
+    .banner2,
+    .banner3 {
+        width: 100%;
+    }
+
+    /* Conteúdo geral centralizado e empilhado */
+    #geral {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    /* Rodapé adaptável */
+    #rodape {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+        line-height: 1.6;
+    }
 }
